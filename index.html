@@ -1,13 +1,512 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daydream Designs by Sherry LLC</title>
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Daydream Designs by Sherry LLC</title>
+<meta content="Daydream Designs by Sherry LLC — jewelry, sparkle, and unique finds." name="description"/>
+<style>
+:root{
+  --bg:#fffafc; --card:#ffffff; --ink:#2b2430; --muted:#71646e;
+  --rose:#d7a7ba; --rose-dark:#9e637d; --gold:#c9ad70; --line:#eadde3;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#ffffffee;border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-family:Georgia,serif;font-weight:700}
+.brand small{display:block;font-family:Arial,sans-serif;font-size:.72rem;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}.site-logo{display:block;width:260px;max-width:38vw;height:auto}
+nav{display:flex;gap:20px}
+nav a:hover{color:var(--rose-dark)}
+.hero{padding:78px 0 58px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:center}
+.eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--rose-dark)}
+h1,h2{font-family:Georgia,serif}
+h1{font-size:clamp(2.7rem,6vw,5rem);line-height:1;margin:.2em 0}
+.hero p,.muted{color:var(--muted)}
+.hero-card{min-height:420px;border-radius:30px;padding:28px;display:flex;align-items:flex-end;
+background:radial-gradient(circle at 28% 22%,#fff 0 8%,transparent 22%),linear-gradient(145deg,#e8cad7,#f6e9ef 50%,#efe3c7);
+box-shadow:0 16px 40px #5d465519;position:relative;overflow:hidden}
+.spark{position:absolute;font-size:3rem;opacity:.4}
+.s1{top:30px;left:35px}.s2{top:100px;right:40px}.s3{bottom:110px;left:80px}
+.hero-note{background:#ffffffd9;border:1px solid #ffffff;padding:18px 20px;border-radius:18px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
+.btn{display:inline-block;background:var(--ink);color:white;padding:12px 18px;border-radius:999px;font-weight:700}
+.btn.alt{background:white;color:var(--ink);border:1px solid var(--line)}
+section{padding:64px 0}
+.maker-story{padding:20px 0 58px}
+.maker-frame{background:white;border:1px solid var(--line);border-radius:28px;padding:18px;box-shadow:0 16px 40px #5d465519}
+.maker-frame img{display:block;width:100%;height:auto;border-radius:18px}
+.maker-caption{text-align:center;padding:18px 12px 6px}
+.maker-caption h2{margin:.15em 0 .3em;font-size:clamp(1.8rem,4vw,2.7rem)}
+.maker-caption p{max-width:760px;margin:0 auto;color:var(--muted)}
+.section-title{text-align:center;max-width:720px;margin:0 auto 34px}
+.section-title h2{font-size:clamp(2rem,4vw,3rem);margin:.2em 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.product{background:white;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 12px 30px #5d465510}
+.photo{aspect-ratio:1/1;background:linear-gradient(135deg,#fff,#f4e8ed);display:grid;place-items:center;text-align:center;padding:24px;color:var(--rose-dark);font-weight:700}
+.product-body{padding:18px}
+.product-body h3{margin:0 0 6px}
+.product-body p{margin:0;color:var(--muted)}
+.tag{display:inline-block;margin-top:12px;padding:5px 10px;border-radius:999px;background:#f7edf1;color:var(--rose-dark);font-size:.78rem;font-weight:700}
+.feature,.about-card{background:white;border:1px solid var(--line);border-radius:28px;padding:36px;box-shadow:0 12px 30px #5d465510}
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.feature-art{min-height:280px;border-radius:22px;background:linear-gradient(145deg,#2b2430,#6b4a5a);color:white;display:grid;place-items:center;text-align:center;padding:30px}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px}
+details{background:white;border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:10px 0}
+summary{font-weight:700;cursor:pointer}
+footer{border-top:1px solid var(--line);padding:35px 0;color:var(--muted)}
+.notice{border:1px dashed var(--rose);background:white;padding:16px 18px;border-radius:14px;margin-top:18px}
 
+.faith-purpose{padding:64px 0;background:linear-gradient(180deg,#fffaf7,#f8edf2)}
+.faith-card{width:min(1120px,92%);margin:0 auto;background:white;border:1px solid var(--line);border-radius:28px;padding:18px;box-shadow:0 16px 40px #5d465519}
+.faith-card img{display:block;width:100%;height:auto;border-radius:18px}
+.faith-caption{text-align:center;padding:22px 14px 10px}
+.faith-caption h2{margin:.15em 0 .3em;font-size:clamp(2rem,4vw,3rem)}
+.faith-caption p{max-width:760px;margin:0 auto;color:var(--muted)}
+@media(max-width:800px){
+  .hero-grid,.feature,.about{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr 1fr}
+  nav{gap:12px;font-size:.9rem;flex-wrap:wrap;justify-content:flex-end}
+}
+@media(max-width:540px){
+  .grid{grid-template-columns:1fr}
+  .nav{align-items:flex-start;padding:14px 0}.site-logo{width:190px;max-width:45vw}
+  nav{max-width:52%}
+}
+
+
+/* Product gallery sizing */
+.products{
+  width:min(1120px,92%);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:20px;
+  padding-top:18px;
+}
+.product-card{
+  min-width:0;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 8px 22px #5d465512;
+}
+.product-photo{
+  width:100%;
+  aspect-ratio:4/5;
+  overflow:hidden;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.product-photo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+  background:#fff;
+}
+.product-info{padding:12px 14px 14px}
+.product-info h3{font-size:1rem;line-height:1.25;margin:0 0 5px}
+.product-info p{font-size:.84rem;line-height:1.35;margin:0;color:var(--muted)}
+.product-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:10px;font-size:.82rem}
+.product-bottom a{color:var(--rose-dark);font-weight:700}
+.product-bottom strong{font-size:.82rem}
+.maker-frame{max-width:920px;margin:0 auto}
+.maker-frame img{width:100%;max-height:520px;object-fit:contain;background:#fff}
+.hero-note img{max-width:380px!important}
+@media(max-width:1000px){.products{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.product-info{padding:10px 11px 12px}}
+@media(max-width:460px){.products{grid-template-columns:repeat(2,minmax(0,1fr));width:94%;gap:10px}.product-info h3{font-size:.9rem}.product-info p{font-size:.76rem}.product-bottom{font-size:.74rem}.product-photo{aspect-ratio:4/5}}
+
+
+.handmade-gallery{padding:58px 0 70px;background:#f7f8f3}
+.handmade-gallery .gallery-intro{text-align:center;max-width:760px;margin:0 auto 28px;padding:0 20px}
+.handmade-gallery .gallery-intro h2{margin:.15em 0 .25em;font-size:clamp(2rem,4vw,3rem)}
+.handmade-gallery .gallery-intro p{color:var(--muted);margin:.35em 0}
+.handmade-gallery .not-for-sale{font-weight:700;color:#365b49}
+.handmade-grid{width:min(1120px,92%);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.handmade-item{margin:0;background:white;border:1px solid var(--line);border-radius:22px;padding:10px;box-shadow:0 10px 26px #5d465512;overflow:hidden}
+.handmade-item img{display:block;width:100%;height:360px;object-fit:cover;border-radius:15px}
+.handmade-item figcaption{text-align:center;padding:11px 8px 7px;color:var(--muted);font-size:.94rem}
+@media(max-width:850px){.handmade-grid{grid-template-columns:repeat(2,1fr)}.handmade-item img{height:330px}}
+@media(max-width:560px){.handmade-grid{grid-template-columns:1fr}.handmade-item img{height:auto;max-height:none;object-fit:contain}}
+
+
+.hero-card.hero-card-image{min-height:0;padding:0;background:none;border:0;box-shadow:none;overflow:hidden;display:block}
+.hero-card.hero-card-image img{display:block;width:100%;height:auto;border-radius:30px}
+
+.product-card > a{display:block;color:inherit;text-decoration:none}.product-card > a:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+</style>
+</head>
 <body>
-    <h1>Daydream Designs by Sherry LLC</h1>
-    <p>Welcome to my boutique!</p>
+<header>
+<div class="wrap nav">
+<a class="brand" href="#home"><img alt="Daydream Designs by Sherry LLC logo" class="site-logo" src="images/daydream-logo.jpg"/></a>
+<nav>
+<a href="#shop">Shop</a>
+<a href="#whatnot">Whatnot</a>
+<a href="#faith-purpose">Faith &amp; Purpose</a>
+<a href="#about">About</a>
+<a href="#faq">FAQ</a>
+</nav>
+</div>
+</header>
+<main id="home">
+<section class="hero">
+<div class="wrap hero-grid">
+<div>
+<div class="eyebrow">Jewelry • Sparkle • Unique Finds</div>
+<h1>A little daydream you can wear.</h1>
+<p>Welcome to Daydream Designs by Sherry LLC — a jewelry boutique featuring beautiful everyday pieces, sterling silver, moissanite, fashion jewelry, statement earrings, and more.</p>
+<div class="actions">
+<a class="btn" href="#shop">Browse Jewelry</a>
+<a class="btn alt" href="https://www.whatnot.com/s/gZs1NGnj" rel="noopener noreferrer" target="_blank">Shop with me LIVE on Whatnot</a>
+</div>
+</div>
+<div class="hero-card hero-card-image">
+<img alt="Daydream Designs by Sherry LLC with eucalyptus and natural wood decor" src="images/hero-eucalyptus-logo.png"/>
+</div>
+</div>
+</section>
+<section aria-label="The heart behind Daydream Designs" class="maker-story">
+<div class="wrap">
+<div class="maker-frame">
+<img alt="Handmade Daydream Designs by Sherry wooden artwork" src="images/daydream-handmade-sign.jpg"/>
+<div class="maker-caption">
+<div class="eyebrow">The Heart Behind Daydream Designs</div>
+<h2>Made with my own hands.</h2>
+<p>This piece is not for sale. It is something I created myself and am especially proud of — a little piece of the creativity and heart behind Daydream Designs by Sherry LLC.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Product listing grouped by similar styles; styles 64 and 65 intentionally excluded from sale listing. --><section class="products section tight-top" id="shop">
+<article class="product-card">
+<a href="https://square.link/u/oLkCH0j9" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 1" loading="lazy" src="images/products/earring-01.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 01</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/oLkCH0j9" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/xDrKHxE0" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 7" loading="lazy" src="images/products/earring-07.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 02</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/xDrKHxE0" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/psTSoDnM" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 17" loading="lazy" src="images/products/earring-17.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 03</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/psTSoDnM" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/wRfSuViQ" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 2" loading="lazy" src="images/products/earring-02.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 04</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/wRfSuViQ" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/CnXfOdIL" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 16" loading="lazy" src="images/products/earring-16.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 05</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/CnXfOdIL" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/Oc25vDsU" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 20" loading="lazy" src="images/products/earring-20.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 06</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/Oc25vDsU" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/puUXm6u9" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 6" loading="lazy" src="images/products/earring-06.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 07</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/puUXm6u9" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/Di4rtVls" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 10" loading="lazy" src="images/products/earring-10.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 08</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/Di4rtVls" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/5ILhgKqv" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 12" loading="lazy" src="images/products/earring-12.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 09</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/5ILhgKqv" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/CeInEFLE" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 8" loading="lazy" src="images/products/earring-08.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 10</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/CeInEFLE" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/qedTtdTx" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 11" loading="lazy" src="images/products/earring-11.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 11</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/qedTtdTx" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/Bsg0akXR" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 15" loading="lazy" src="images/products/earring-15.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 12</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/Bsg0akXR" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/4pLUKQIm" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 3" loading="lazy" src="images/products/earring-03.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 13</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/4pLUKQIm" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/avZVvR85" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 64" loading="lazy" src="images/products/earring-64.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 14</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/avZVvR85" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/uo5U3DDJ" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 5" loading="lazy" src="images/products/earring-05.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 15</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/uo5U3DDJ" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/Mpj2KFoW" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 4" loading="lazy" src="images/products/earring-04.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 16</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/Mpj2KFoW" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/hy3rz2rd" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 14" loading="lazy" src="images/products/earring-14.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 17</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/hy3rz2rd" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/iby0JW7k" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 9" loading="lazy" src="images/products/earring-09.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 18</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/iby0JW7k" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/S1Q666MZ" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 19" loading="lazy" src="images/products/earring-66.png"/></div></a>
+<div class="product-info"><h3>Earring Style 19</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/S1Q666MZ" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/U21Auknu" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 13" loading="lazy" src="images/products/earring-13.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 20</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/U21Auknu" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/1Bih0HdI" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 18" loading="lazy" src="images/products/earring-18.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 21</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/1Bih0HdI" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/hxXFmdvt" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 40" loading="lazy" src="images/products/earring-40.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 22</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/hxXFmdvt" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/61pBu4UT" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 41" loading="lazy" src="images/products/earring-41.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 23</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/61pBu4UT" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/snO4lthb" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 45" loading="lazy" src="images/products/earring-45.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 24</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/snO4lthb" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/lDLqepsD" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 42" loading="lazy" src="images/products/earring-42.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 25</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/lDLqepsD" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/J8l9bmME" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 44" loading="lazy" src="images/products/earring-44.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 26</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/J8l9bmME" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/P524061P" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 46" loading="lazy" src="images/products/earring-46.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 27</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/P524061P" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/K25my3Xy" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 19" loading="lazy" src="images/products/earring-19.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 28</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/K25my3Xy" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/oMeBIlJF" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 26" loading="lazy" src="images/products/earring-26.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 29</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/oMeBIlJF" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/SHLzpDyw" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 32" loading="lazy" src="images/products/earring-32.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 30</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/SHLzpDyw" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/11FqRYfB" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 33" loading="lazy" src="images/products/earring-33.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 31</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/11FqRYfB" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/8q3qBET7" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 37" loading="lazy" src="images/products/earring-37.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 32</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/8q3qBET7" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/ivc5xRRQ" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 38" loading="lazy" src="images/products/earring-38.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 33</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/ivc5xRRQ" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/3xfarSLl" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 39" loading="lazy" src="images/products/earring-39.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 34</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/3xfarSLl" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/S4wed4Rj" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 21" loading="lazy" src="images/products/earring-21.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 35</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/S4wed4Rj" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/jBpqYfqZ" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 25" loading="lazy" src="images/products/earring-25.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 36</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/jBpqYfqZ" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/q8B8rktQ" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 34" loading="lazy" src="images/products/earring-34.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 37</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/q8B8rktQ" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/PBbcZRGd" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 22" loading="lazy" src="images/products/earring-22.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 38</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/PBbcZRGd" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/Vca81Wgu" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 29" loading="lazy" src="images/products/earring-29.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 39</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/Vca81Wgu" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/cR5rI0oZ" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 35" loading="lazy" src="images/products/earring-35.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 40</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/cR5rI0oZ" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/PMJwB0DK" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 23" loading="lazy" src="images/products/earring-23.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 41</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/PMJwB0DK" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/V5Ws9y75" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 24" loading="lazy" src="images/products/earring-24.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 42</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/V5Ws9y75" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/BpQLxxRV" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 36" loading="lazy" src="images/products/earring-36.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 43</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/BpQLxxRV" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/r4QR0703" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 27" loading="lazy" src="images/products/earring-27.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 44</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/r4QR0703" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/WA0zi1Gt" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 28" loading="lazy" src="images/products/earring-28.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 45</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/WA0zi1Gt" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/mRP8Pk7c" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 30" loading="lazy" src="images/products/earring-30.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 46</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/mRP8Pk7c" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/VSSqSfV2" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 31" loading="lazy" src="images/products/earring-31.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 47</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/VSSqSfV2" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/Ppa0wrrI" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 43" loading="lazy" src="images/products/earring-43.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 48</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/Ppa0wrrI" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/VCOl4P60" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 47" loading="lazy" src="images/products/earring-47.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 49</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/VCOl4P60" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/N7h1mwcI" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 48" loading="lazy" src="images/products/earring-48.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 50</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/N7h1mwcI" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/GYLKCfzT" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 49" loading="lazy" src="images/products/earring-49.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 51</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/GYLKCfzT" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/FeBgCCtE" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 50" loading="lazy" src="images/products/earring-50.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 52</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/FeBgCCtE" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/4LVdIANv" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 51" loading="lazy" src="images/products/earring-51.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 53</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/4LVdIANv" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/nJqU7Hsx" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 52" loading="lazy" src="images/products/earring-52.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 54</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/nJqU7Hsx" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/7X00TG0p" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 53" loading="lazy" src="images/products/earring-53.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 55</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/7X00TG0p" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/2Aie7nyF" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 54" loading="lazy" src="images/products/earring-54.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 56</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/2Aie7nyF" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/KIPlRovh" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 55" loading="lazy" src="images/products/earring-55.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 57</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/KIPlRovh" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/ehBRpdv8" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 56" loading="lazy" src="images/products/earring-56.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 58</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/ehBRpdv8" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/sTMxFHpW" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 57" loading="lazy" src="images/products/earring-57.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 59</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/sTMxFHpW" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/scw5pGPO" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 58" loading="lazy" src="images/products/earring-58.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 60</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/scw5pGPO" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/wztTEiml" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 59" loading="lazy" src="images/products/earring-59.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 61</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/wztTEiml" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/R4oAzFdl" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 60" loading="lazy" src="images/products/earring-60.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 62</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/R4oAzFdl" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/L64FAj2B" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 61" loading="lazy" src="images/products/earring-61.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 63</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/L64FAj2B" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/sSb9eGni" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 62" loading="lazy" src="images/products/earring-62.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 64</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/sSb9eGni" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/gb9XoeH2" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs earring style 63" loading="lazy" src="images/products/earring-63.jpg"/></div></a>
+<div class="product-info"><h3>Earring Style 65</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/gb9XoeH2" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/NqjrHmj5" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs Earring 66" loading="lazy" src="images/products/earring-66-corrected.png"/></div></a>
+<div class="product-info"><h3>Earring Style 66</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/NqjrHmj5" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/8GX8ZhX3" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs Earring 67" loading="lazy" src="images/products/earring-68.png"/></div></a>
+<div class="product-info"><h3>Earring Style 67</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/8GX8ZhX3" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/MmkUuYwj" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs Earring 68" loading="lazy" src="images/products/earring-69.png"/></div></a>
+<div class="product-info"><h3>Earring Style 68</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/MmkUuYwj" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/HdUTCayo" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs Earring 69" loading="lazy" src="images/products/earring-70.png"/></div></a>
+<div class="product-info"><h3>Earring Style 69</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/HdUTCayo" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/5XptrWc9" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs Earring 70" loading="lazy" src="images/products/earring-71.png"/></div></a>
+<div class="product-info"><h3>Earring Style 70</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/5XptrWc9" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/etB6wMMy" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs Earring 71" loading="lazy" src="images/products/earring-72.png"/></div></a>
+<div class="product-info"><h3>Earring Style 71</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/etB6wMMy" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/qmmtpUoD" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs Earring 72" loading="lazy" src="images/products/earring-73.png"/></div></a>
+<div class="product-info"><h3>Earring Style 72</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/qmmtpUoD" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/mS3O5q7g" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs Earring 73" loading="lazy" src="images/products/earring-74.png"/></div></a>
+<div class="product-info"><h3>Earring Style 73</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/mS3O5q7g" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/FapYquu6" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs Earring 74" loading="lazy" src="images/products/earring-75.png"/></div></a>
+<div class="product-info"><h3>Earring Style 74</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/FapYquu6" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/ey6FDE0Z" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs Earring 75" loading="lazy" src="images/products/earring-76.png"/></div></a>
+<div class="product-info"><h3>Earring Style 75</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/ey6FDE0Z" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/5qlgxpYI" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs Earring 76" loading="lazy" src="images/products/earring-77.png"/></div></a>
+<div class="product-info"><h3>Earring Style 76</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/5qlgxpYI" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/V4jPtRFA" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs Earring 77" loading="lazy" src="images/products/earring-78.png"/></div></a>
+<div class="product-info"><h3>Earring Style 77</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/V4jPtRFA" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/dLu1WJVc" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs Earring 78" loading="lazy" src="images/products/earring-79.png"/></div></a>
+<div class="product-info"><h3>Earring Style 78</h3><p>Hand-picked boutique earrings • Daydream Designs</p><div class="product-bottom"><a href="https://square.link/u/dLu1WJVc" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article><article class="product-card">
+<a href="https://square.link/u/cnBWN6LQ" rel="noopener noreferrer" target="_blank"><div class="product-photo"><img alt="Daydream Designs Gold Vermeil 925 sterling silver chandelier earrings, Earring 79" loading="lazy" src="images/products/earring-67.png"/></div></a>
+<div class="product-info"><h3>Earring Style 79</h3><p>GOLD VERMEIL 925 sterling silver chandelier earrings.</p><div class="product-bottom"><a href="https://square.link/u/cnBWN6LQ" rel="noopener noreferrer" target="_blank">Buy Now</a></div></div>
+</article>
+</section>
+<section id="whatnot">
+<div class="wrap feature">
+<div>
+<div class="eyebrow">Live Shopping</div>
+<h2>Catch Daydream Designs on Whatnot</h2>
+<p class="muted">Send shoppers straight to your Whatnot store for live sales, auctions, Buy It Now items, and new jewelry drops.</p>
+<div class="actions"><a class="btn" href="https://www.whatnot.com/s/gZs1NGnj" rel="noopener noreferrer" target="_blank">Shop with me LIVE on Whatnot</a></div>
+</div>
+<div class="feature-art"><a aria-label="Shop with me LIVE on Whatnot" href="https://www.whatnot.com/s/gZs1NGnj" rel="noopener noreferrer" target="_blank"><img alt="Shop with me LIVE on Whatnot — Daydream Designs by Sherry LLC" src="images/whatnot-live-banner.png" style="width:100%;height:auto;display:block;border-radius:18px"/></a></div>
+</div>
+</section>
+<section class="faith-purpose" id="faith-purpose">
+<div class="faith-card">
+<img alt="Daydream Designs by Sherry LLC Faith, Creativity, Purpose and Grace inspirational message" loading="lazy" src="images/faith-purpose.jpg"/>
+<div class="faith-caption">
+<div class="eyebrow">Faith &amp; Purpose</div>
+<h2>The heart behind the daydream</h2>
+<p>Faith, gratitude, humility, generosity, and grace are part of the purpose behind Daydream Designs by Sherry LLC.</p>
+</div>
+</div>
+</section>
+<section class="handmade-gallery" id="handmade-from-heart">
+<div class="gallery-intro">
+<div class="eyebrow">Handmade from the Heart</div>
+<h2>Wooden creations made by Sherry</h2>
+<p>A few personal pieces created with care, creativity, and meaning.</p>
+<p class="not-for-sale">Personal creations — not for sale.</p>
+</div>
+<div class="handmade-grid">
+<figure class="handmade-item"><img alt="Handmade framed Forgot Your Phone word-search wooden sign" loading="lazy" src="images/handmade-gallery/forgot-your-phone.jpg"/><figcaption>Handmade framed sign</figcaption></figure>
+<figure class="handmade-item"><img alt="Handmade framed daughters and best friends wooden sign" loading="lazy" src="images/handmade-gallery/woman-with-daughters.jpg"/><figcaption>Handmade framed sign</figcaption></figure>
+<figure class="handmade-item"><img alt="Handmade framed family quote wooden sign with black background" loading="lazy" src="images/handmade-gallery/children-front-door-black.jpg"/><figcaption>Handmade family sign</figcaption></figure>
+<figure class="handmade-item"><img alt="Handmade framed family quote sign displayed beside greenery" loading="lazy" src="images/handmade-gallery/children-front-door-white-plants.jpg"/><figcaption>Handmade family sign</figcaption></figure>
+<figure class="handmade-item"><img alt="Handmade framed What a Wonderful World wooden sign" loading="lazy" src="images/handmade-gallery/wonderful-world.jpg"/><figcaption>Handmade framed sign</figcaption></figure>
+<figure class="handmade-item"><img alt="Handmade wooden creation by Sherry" loading="lazy" src="images/handmade-gallery/handmade-06-dear-santa.jpg"/><figcaption>Handmade creation by Sherry</figcaption></figure>
+<figure class="handmade-item"><img alt="Handmade wooden creation by Sherry" loading="lazy" src="images/handmade-gallery/handmade-07-today.jpg"/><figcaption>Handmade creation by Sherry</figcaption></figure>
+<figure class="handmade-item"><img alt="Handmade wooden creation by Sherry" loading="lazy" src="images/handmade-gallery/handmade-08-sorry-winter.jpg"/><figcaption>Handmade creation by Sherry</figcaption></figure>
+<figure class="handmade-item"><img alt="Handmade wooden creation by Sherry" loading="lazy" src="images/handmade-gallery/handmade-09-whiskey.jpg"/><figcaption>Handmade creation by Sherry</figcaption></figure>
+<figure class="handmade-item"><img alt="Handmade wooden creation by Sherry" loading="lazy" src="images/handmade-gallery/handmade-10-waited-for.jpg"/><figcaption>Handmade creation by Sherry</figcaption></figure>
+<figure class="handmade-item"><img alt="Handmade wooden creation by Sherry" loading="lazy" src="images/handmade-gallery/handmade-11-home-sweet-home.jpg"/><figcaption>Handmade creation by Sherry</figcaption></figure>
+<figure class="handmade-item"><img alt="Handmade wooden creation by Sherry" loading="lazy" src="images/handmade-gallery/handmade-12-all-of-me.jpg"/><figcaption>Handmade creation by Sherry</figcaption></figure>
+<figure class="handmade-item"><img alt="Handmade wooden creation by Sherry" loading="lazy" src="images/handmade-gallery/handmade-13-bless-food-family-love.jpg"/><figcaption>Handmade creation by Sherry</figcaption></figure>
+<figure class="handmade-item"><img alt="Handmade wooden creation by Sherry" loading="lazy" src="images/handmade-gallery/handmade-14-wood-star.jpg"/><figcaption>Handmade creation by Sherry</figcaption></figure>
+<figure class="handmade-item"><img alt="Handmade wooden creation by Sherry" loading="lazy" src="images/handmade-gallery/handmade-15-be-the-light.jpg"/><figcaption>Handmade creation by Sherry</figcaption></figure>
+<figure class="handmade-item"><img alt="Handmade wooden creation by Sherry" loading="lazy" src="images/handmade-gallery/handmade-16-lemonade.jpg"/><figcaption>Handmade creation by Sherry</figcaption></figure>
+<figure class="handmade-item"><img alt="Handmade wooden creation by Sherry" loading="lazy" src="images/handmade-gallery/handmade-17-daydream-star.jpg"/><figcaption>Handmade creation by Sherry</figcaption></figure>
+<figure class="handmade-item"><img alt="Handmade wooden creation by Sherry" loading="lazy" src="images/handmade-gallery/handmade-18-pack.jpg"/><figcaption>Handmade creation by Sherry</figcaption></figure>
+<figure class="handmade-item"><img alt="Handmade wooden creation by Sherry" loading="lazy" src="images/handmade-gallery/handmade-19-family-love.jpg"/><figcaption>Handmade creation by Sherry</figcaption></figure>
+<figure class="handmade-item"><img alt="Handmade wooden creation by Sherry" loading="lazy" src="images/handmade-gallery/handmade-20-table-memories.jpg"/><figcaption>Handmade creation by Sherry</figcaption></figure>
+</div>
+</section>
+<section id="about">
+<div class="wrap about">
+<div class="about-card">
+<div class="eyebrow">About</div>
+<h2>Daydream Designs by Sherry LLC</h2>
+<p class="muted">A small jewelry business built around pretty pieces, fun finds, sparkle, and personal service.</p>
+</div>
+<div class="about-card">
+<h2>Made for Jewelry Lovers</h2>
+<p class="muted">Whether you love a little sparkle, a bold statement, or that perfect everyday pair, I believe jewelry should make you feel beautiful the moment you put it on. Each piece at Daydream Designs by Sherry LLC is chosen with care, with styles for every mood, moment, and daydream.</p>
+<p class="muted"><strong>A little sparkle. A little joy. A little daydream you can wear.</strong> ✨</p>
+</div>
+</div>
+</section>
+<section id="faq">
+<div class="wrap">
+<div class="section-title"><div class="eyebrow">Helpful Info</div><h2>Frequently asked questions</h2></div>
+<details><summary>Where can I buy your jewelry?</summary><p>You can add links here to Whatnot, your online shop, social media, or any other place you sell.</p></details>
+<details><summary>Do you sell sterling silver and moissanite?</summary><p>Yes. Edit this answer to match the exact materials and products you currently carry.</p></details>
+<details><summary>How do shipping and returns work?</summary><p>Add your own shipping times, return policy, and customer-service information here.</p></details>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+<strong>Daydream Designs by Sherry LLC</strong><br/>
+    © 2026 Daydream Designs by Sherry LLC. All rights reserved.
+  </div>
+</footer>
 </body>
 </html>
